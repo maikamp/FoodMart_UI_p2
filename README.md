@@ -2,14 +2,18 @@
 
 API repo: https://github.com/jalejr/FoodMartAPI_p2
 
-# The front use react app or html
-## Distribute to main three role
-### User:
-- User able to open main page 
-- Also user can make a registration 
-- User can login
-- And user also able to select some items and added to his wish list
-- User can open his user list and can remove some items 
+# The front end will use react app or html
+## Distribute to main three roles
+### As a User I must be able to:
+- open main page 
+- register
+- login
+- create a list
+- view my list(s)
+- remove a list i own
+- search for items
+- add items to my list(s) 
+- remove items from my list(s)
 ### Employee
 - Employee also can open the main page and
 - Can register by using his Employee number
