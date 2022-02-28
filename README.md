@@ -25,4 +25,6 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 ### As a Manager I must be able to:
 - add new employee 
 - view current employee(s)
+- update an employee
+- remove an employee
 - all other employee functionality
