@@ -3,6 +3,9 @@
 API repo: https://github.com/jalejr/FoodMartAPI_p2
 
 ## Grocery List application to allow users to manage shopping lists
+
+## Project:
+This is a web application that connects to a database and is used to create a grocery list before going to a store. It would make planning ideal to make sure a store has what you would want before going in. Expansion of this idea can make it so a store could have employees prepare an order for the user to make shopping much faster and efficient.
   
 ## Tech Stack:
 - Spring Boot (Spring 5)
