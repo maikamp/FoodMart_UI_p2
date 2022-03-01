@@ -30,5 +30,6 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 - all other employee functionality
 
 Reach Goals:
-- customers can share lists
+- customers can share lists  
+  
 contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Damon
