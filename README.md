@@ -23,6 +23,8 @@ This is a web application that connects to a database and is used to create a gr
 - search for items
 - add items to my list
 - remove items from my list
+- get the total cost of my list
+- set the quantity of an item on my list
 ### As an Employee I must be able to:
 - open main page 
 - register using Employee number
