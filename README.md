@@ -45,3 +45,8 @@ Reach Goals:
 - customers can have many lists
   
 contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Damon
+  
+  
+
+  ![p2_GroceryList](https://user-images.githubusercontent.com/70548966/156214309-aebd7ab6-e0be-45a9-86aa-0043fd947be2.png)
+
