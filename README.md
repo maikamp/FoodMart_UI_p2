@@ -13,7 +13,7 @@ This is a web application that connects to a database and is used to create a gr
 - Azure SQL
 - HTML/CSS, JavaScript (Reach goal: React)
 - Java 8
-### As a User(Customer) I must be able to:
+### As a Customer I must be able to:
 - open main page 
 - register
 - login
