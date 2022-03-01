@@ -48,5 +48,5 @@ contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Da
   
   
 
-  ![p2_GroceryList](https://user-images.githubusercontent.com/70548966/156214309-aebd7ab6-e0be-45a9-86aa-0043fd947be2.png)
+![p2_erd](https://user-images.githubusercontent.com/70548966/156214482-17d4b360-a4af-4ab1-bccb-13b0ba88c9bc.PNG)
 
