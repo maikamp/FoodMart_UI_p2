@@ -1,0 +1,15 @@
+UI:
+pages:
+	landing 
+		search items
+		add items to list (iff logged in)
+	login/register
+	customer landing 
+		manage(CRUD) list(s)
+	employee landing
+		manage (RU) item(s)
+	manager landing
+		manage (CRUD) employee(s)
+			on create, receives employee number (pk) to give employee
+		manage (CRUD) items(s)
+		manage (CRUD) customer(s)
