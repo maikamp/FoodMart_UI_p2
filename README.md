@@ -15,11 +15,11 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 - register
 - login
 - create a list
-- view my list(s)
+- view my list
 - remove a list i own
 - search for items
-- add items to my list(s) 
-- remove items from my list(s)
+- add items to my list
+- remove items from my list
 ### As an Employee I must be able to:
 - open main page 
 - register using Employee number
@@ -37,5 +37,6 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 
 Reach Goals:
 - customers can share lists  
+- customers can have many lists
   
 contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Damon
