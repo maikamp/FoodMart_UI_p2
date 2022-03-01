@@ -3,7 +3,13 @@
 API repo: https://github.com/jalejr/FoodMartAPI_p2
 
 ## Grocery List application to allow users to manage shopping lists
-
+  
+## Tech Stack:
+- Spring Boot (Spring 5)
+- Azure DevOps
+- Azure SQL
+- HTML/CSS, JavaScript (Reach goal: React)
+- Java 8
 ### As a User(Customer) I must be able to:
 - open main page 
 - register
