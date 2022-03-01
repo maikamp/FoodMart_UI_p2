@@ -2,8 +2,8 @@
 
 API repo: https://github.com/jalejr/FoodMartAPI_p2
 
-# The front end will use react app or html
-## Distribute to main three roles
+## Grocery List application to allow users to manage shopping lists
+
 ### As a User(Customer) I must be able to:
 - open main page 
 - register
@@ -28,3 +28,7 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 - update an employee
 - remove an employee
 - all other employee functionality
+
+Reach Goals:
+- customers can share lists
+contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Damon
