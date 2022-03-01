@@ -16,7 +16,7 @@ This is a web application that connects to a database and is used to create a gr
 ### As a Customer I must be able to:
 - open main page 
 - register
-- login
+- login/logout
 - create a list
 - view my list
 - remove a list i own
@@ -28,7 +28,7 @@ This is a web application that connects to a database and is used to create a gr
 ### As an Employee I must be able to:
 - open main page 
 - register using Employee number
-- login
+- login/logout
 - view item inventory
 - add items to inventory
 - update items in inventory
