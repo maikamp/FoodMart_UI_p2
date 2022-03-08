@@ -1,0 +1,20 @@
+  var minTurns = 0;
+    
+    //need to account for splitting pins in the middle to force even turns for opponent
+    for(let i = 0; i < n; i++){
+
+        if(config[i] === 'I'){
+            if (i === config.length-1){
+            }
+            else if (config[i] === config[i+1]){
+                i++;
+            }
+            minTurns++;
+        }
+    }
+    if(minTurns%2===0){
+        return 'LOSE'
+    }
+    else{
+        return 'WIN'
+    }
