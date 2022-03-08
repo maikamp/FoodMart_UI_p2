@@ -11,9 +11,32 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '../logo.svg'
+import {Link} from "@mui/material";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [{
+        "title": 'Items',
+        "link": 'https://www.youtube.com/watch?v=hpsbj0OoeNo'
+    },
+    {
+        "title": 'Lists',
+        "link": 'https://www.youtube.com/watch?v=o_cikTgwMXY'
+    },
+
+];
+const settings = [{
+    "title": 'Profile',
+    "link": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {
+        "title": 'Dashboard',
+        "link": 'https://www.youtube.com/watch?v=o0u4M6vppCI'
+    },
+    {
+        "title": 'Logout',
+        "link": 'https://www.youtube.com/watch?v=SW-BU6keEUw'
+    },
+]
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -44,7 +67,7 @@ const Navbar = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        LOGO
+                        Food Mart
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -77,8 +100,8 @@ const Navbar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                                    <Link href={page.link} color="inherit" variant="body2" underline="none"><Typography textAlign="center">{page.title}</Typography></Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -89,16 +112,16 @@ const Navbar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        LOGO
+                        {Logo}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.title}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                <Link href={page.link} color="inherit" variant="body2" underline="none">{page.title}</Link>
                             </Button>
                         ))}
                     </Box>
@@ -126,8 +149,8 @@ const Navbar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
+                                <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
+                                    <Link href={setting.link} color="inherit" variant="body2" underline="none"><Typography textAlign="center">{setting.title}</Typography></Link>
                                 </MenuItem>
                             ))}
                         </Menu>
