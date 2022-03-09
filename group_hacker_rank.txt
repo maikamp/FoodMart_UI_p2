@@ -1,0 +1,61 @@
+  var minTurns = 0;
+    
+    //need to account for splitting pins in the middle to force even turns for opponent
+    for(let i = 0; i < n; i++){
+        if(config[i] === 'I'){
+            if (i === config.length-1){
+            }
+            else if (config[i] === config[i+1]){
+                i++;
+            }
+            minTurns++;
+        }
+    }
+    //look for splittable sets, sets of 3 or more adjacent pins that can be split to add a turn
+    let splitCounter = 0;
+    for(let i = 0; i < n; i++){
+        console.log('At index ' + i + ' minturns = ' + minTurns);
+        if (config[i] === 'I'){
+            if (i === config.length-2){
+                break;
+            }
+            else if (config[i] === config[i+1] && config[i] === config[i+2]){
+                minTurns++;
+                i += 2;
+            }
+        }
+    }
+    
+    
+    
+    if(minTurns%2===0){
+        return 'LOSE'
+    }
+    else{
+        return 'WIN'
+    }
+
+}
+	
+
+should check how many pairs, how many singles, 
+if even pairs, can win
+sample set should be:
+WIN
+WIN
+WIN
+WIN
+
+4
+4
+IIII
+5
+IIIII
+6
+IIIIII
+8
+IXXIIIXI
+	
+identify 'splittable' groups 
+-- groups of 3 or more adjacent pins that can be 'split' to add to minTurns
+--for each splittable minTurns++

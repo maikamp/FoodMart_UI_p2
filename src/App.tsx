@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
+import EnhancedTable from './components/ItemList'
 import Register from './components/Register'
 
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar></Navbar>
      
      <Register/>
+      <EnhancedTable></EnhancedTable>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
