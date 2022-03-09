@@ -46,6 +46,15 @@ function createData(
 function deleteItem (items: readonly string[]){
   console.log(items);
 }
+//temp hardcoded props
+const userProps = {'id': 1, 'username': 'mike'}
+
+function getItems(props: JSON){
+  
+  fetch('endpoint based on props')
+  .then(res => res.json())
+  
+}
 //list name
 const listTitle = 'My Grocery List';
 //TODO this is where JSON needs to be destructured into relevant data for the display table
