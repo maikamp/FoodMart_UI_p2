@@ -1,10 +1,10 @@
 import axios from 'axios';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Role } from '../../Models/Role';
 export default function GetAllRoles() {
     const [all, setAll] = useState();
     const getAll = async () => {
-        let respo = await axios.get('http://localhost:8080/roles')
+        let respo = await axios.get('http://localhost:8080/roles');
         let data = await respo.data;
         console.log(data);
         let allRoles = data.map(r => {
