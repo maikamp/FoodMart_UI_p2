@@ -20,6 +20,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import AddIcon from '@mui/icons-material/Add';
 
 interface Data {
   price: number;
@@ -33,14 +34,17 @@ function createData(
   name: string,
   price: number,
   description: string,
-  itemCount: number,
+  itemCount: number
 ): Data {
   return {
     name,
     price,
     description,
-    itemCount,
+    itemCount
   };
+}
+function deleteItem (items: readonly string[]){
+  console.log(items);
 }
 //list name
 const listTitle = 'My Grocery List';
@@ -49,8 +53,10 @@ const rows = [
   createData('Celery', 1.89, 'one stalk', 3),
   createData('Donuts', 3.99, 'one box, frosted', 2),
   createData('Spam', 2.15, 'what is it, really?', 1),
-  createData('All-Porpoise Flour', 159, 'Not a typo, flour made from porpoises', 24)
+  createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
 ];
+//fetch
+// const groceryItem = [itemName, itemPrice] = groceries;
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -68,9 +74,9 @@ function getComparator<Key extends keyof any>(
   order: Order,
   orderBy: Key,
 ): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string },
-) => number {
+    a: { [key in Key]: number | string },
+    b: { [key in Key]: number | string },
+  ) => number {
   return order === 'desc'
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
@@ -151,7 +157,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
             inputProps={{
-              'aria-label': 'select all desserts',
+              'aria-label': 'select all',
             }}
           />
         </TableCell>
@@ -183,10 +189,11 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 
 interface EnhancedTableToolbarProps {
   numSelected: number;
+  selectedObjects: readonly string[];
 }
 
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
-  const { numSelected } = props;
+  const { numSelected, selectedObjects } = props;
 
   return (
     <Toolbar
@@ -217,23 +224,27 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
         >
           {listTitle}
         </Typography>
-      )}
+      )} 
+      {/* Need to add delete functionality */}
       {numSelected > 0 ? (
         <Tooltip title="Delete">
-          <IconButton>
+          <IconButton onClick={()=>deleteItem(selectedObjects)}>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
+        //Add button
+        <Tooltip title="Add Item">
           <IconButton>
-            <FilterListIcon />
+            <AddIcon />
           </IconButton>
         </Tooltip>
       )}
     </Toolbar>
   );
 };
+
+
 
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState<Order>('asc');
@@ -303,7 +314,7 @@ export default function EnhancedTable() {
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
+        <EnhancedTableToolbar numSelected={selected.length} selectedObjects={selected} />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
