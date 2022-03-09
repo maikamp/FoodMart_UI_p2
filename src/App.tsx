@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
-import EnhancedTable from './components/displayBox'
+import EnhancedTable from './components/ItemList'
 
 function App() {
   return (

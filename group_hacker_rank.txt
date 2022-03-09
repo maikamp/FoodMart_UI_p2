@@ -18,3 +18,16 @@
     else{
         return 'WIN'
     }
+	
+	
+	should check how many pairs, how many singles, 
+	if even pairs, can win
+	4
+	4
+	IIII
+	5
+	IIIII
+	6
+	IIIIII
+	8
+	IXXIIIXI

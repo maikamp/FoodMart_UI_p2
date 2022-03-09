@@ -42,7 +42,8 @@ function createData(
     itemCount,
   };
 }
-
+//list name
+const listTitle = 'My Grocery List';
 //TODO this is where JSON needs to be destructured into relevant data for the display table
 const rows = [
   createData('Celery', 1.89, 'one stalk', 3),
@@ -110,16 +111,16 @@ const headCells: readonly HeadCell[] = [
     label: 'Price',
   },
   {
-    id: 'description',
-    numeric: true,
-    disablePadding: false,
-    label: 'Product Description',
-  },
-  {
     id: 'itemCount',
     numeric: true,
     disablePadding: false,
     label: 'Item Count',
+  },
+  {
+    id: 'description',
+    numeric: true,
+    disablePadding: false,
+    label: 'Product Description',
   }
 ];
 
@@ -214,7 +215,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           id="tableTitle"
           component="div"
         >
-          Grocery List
+          {listTitle}
         </Typography>
       )}
       {numSelected > 0 ? (
@@ -354,8 +355,8 @@ export default function EnhancedTable() {
                         {row.name}
                       </TableCell>
                       <TableCell align="right">{row.price}</TableCell>
-                      <TableCell align="right">{row.description}</TableCell>
                       <TableCell align="right">{row.itemCount}</TableCell>
+                      <TableCell align="right">{row.description}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -381,10 +382,10 @@ export default function EnhancedTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <FormControlLabel
+      {/* <FormControlLabel
         control={<Switch checked={dense} onChange={handleChangeDense} />}
         label="Dense padding"
-      />
+      /> */}
     </Box>
   );
 }
