@@ -1,15 +1,21 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
+import Register from './components/Register'
+
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
+     
+     <Register/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
