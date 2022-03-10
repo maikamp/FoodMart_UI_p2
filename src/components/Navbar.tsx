@@ -19,6 +19,10 @@ const pages = [{
         "link": '/Roles'
     },
     {
+        "title": 'Get All Lists',
+        "link": '/GetAllList'
+    },
+    {
         "title": 'Get By ID',
         "link": '/GetById'
     },
@@ -33,6 +37,10 @@ const pages = [{
     {
         "title": 'Login',
         "link": '/Login'
+    },
+    {
+        "title": 'Register',
+        "link": '/Registration'
     }
 
 ];

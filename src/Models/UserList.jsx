@@ -11,5 +11,6 @@ export function UserList(props) {
     return <tr>
         <td>{props.id}</td>
         <td>{props.UserList}</td>
+        <td><Button onClick={()=>deleteUserList(props.id)}>delete</Button></td>
     </tr>
 }

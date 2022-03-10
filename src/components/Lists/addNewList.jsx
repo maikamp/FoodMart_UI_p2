@@ -8,7 +8,7 @@ export default function AddList(){
     let [note, setNote] = useState('');
    
     const add = async() =>{
-        let newRole = {description: descriptionText.current.value}
+        let newRole = {description: descriptionNum.current.value}
         const resp = await axios.post('https://foodmartapi-1646848624483.azurewebsites.net/userLists',newRole);
         const data = await resp.data;
         console.log(data);
@@ -17,7 +17,7 @@ export default function AddList(){
     }
     return<>
     <h1> Create a New List </h1>
-    <input placeholder='list' ref={descriptionText}/>
+    <input placeholder='list' ref={descriptionNum}/>
         <Button onClick={add}>Add</Button>
     <label >{note}</label>
     </>
