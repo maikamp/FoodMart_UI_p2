@@ -26,7 +26,6 @@ export default function LoginMain() {
            } else {
             return false
            }
-            return true;
         } catch (error) {
             return false;
         }
