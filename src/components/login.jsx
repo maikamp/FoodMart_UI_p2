@@ -14,7 +14,18 @@ export default function LoginMain() {
     }
     const authenticated = async () => {
         try {
-            await axios.get(`http://localhost:8080/users/username?username=${username.current.value}`);
+            // https://foodmartapi-1646848624483.azurewebsites.net
+            // http://localhost:8080/users/username?username=${username.current.value}
+
+           let s = await axios.get(`https://foodmartapi-1646848624483.azurewebsites.net/users/username?username=${username.current.value}`);
+           console.log('username=  ' + username.current.value);   
+           
+           if (s.data) {
+               localStorage.setItem('username',s.data.username);
+            return true
+           } else {
+            return false
+           }
             return true;
         } catch (error) {
             return false;

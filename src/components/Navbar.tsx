@@ -11,17 +11,29 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from '../logo.svg'
+// import Logo from '../logo.svg'
 import {Link} from "@mui/material";
 
 const pages = [{
-        "title": 'Items',
-        "link": 'https://www.youtube.com/watch?v=hpsbj0OoeNo'
+        "title": 'Get All Roles',
+        "link": '/Roles'
     },
     {
-        "title": 'Lists',
-        "link": 'https://www.youtube.com/watch?v=o_cikTgwMXY'
+        "title": 'Get By ID',
+        "link": '/GetById'
     },
+    {
+        "title": 'Enhanced Table',
+        "link": '/EnhancedTable'
+    },
+    {
+        "title": 'Add Role',
+        "link": '/AddRole'
+    },
+    {
+        "title": 'Login',
+        "link": '/Login'
+    }
 
 ];
 const settings = [{
@@ -34,7 +46,7 @@ const settings = [{
     },
     {
         "title": 'Logout',
-        "link": 'https://www.youtube.com/watch?v=SW-BU6keEUw'
+        "link": '/Logout'
     },
 ]
 
@@ -112,7 +124,7 @@ const Navbar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        {Logo}
+                        {/* {Logo} */}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
