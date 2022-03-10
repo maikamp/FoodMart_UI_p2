@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
@@ -7,8 +6,13 @@ import EnhancedTable from './components/ItemList'
 // import Register from './components/Register'
 import AddRole from './components/Roles/addNew';
 import GetById from './components/Roles/getById';
-import LoginMain from './components/login';
 import GetAllRoles from './components/Roles/getAll';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 
 
 function App() {
@@ -18,10 +22,30 @@ function App() {
      
      {/*<Register/>*/}
       <EnhancedTable></EnhancedTable>
-        <AddRole/>
+        {/* <AddRole/>
         <GetById/>
         <LoginMain/>
         <GetAllRoles/>
+        <RoleMain/> */}
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <Link to="/Roles">Get All Roles</Link><span> </span>
+                        <Link to="/AddRole">Add Role</Link><span> </span>
+                        <Link to="/GetById">Get By ID</Link><span> </span>
+                        
+                    </ul>
+                </nav>
+                <Routes>
+                <Route path='/Roles' element={< GetAllRoles />}></Route>
+                <Route path='/AddRole' element={< AddRole />}></Route>
+                <Route path='/GetById' element={< GetById />}></Route>
+                <Route path="" element={<>Welcom</>}></Route>
+                </Routes>
+                
+            </div>
+        </Router>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
