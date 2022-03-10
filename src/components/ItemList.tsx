@@ -22,6 +22,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import AddIcon from '@mui/icons-material/Add';
 import { useEffect, useState } from 'react';
+import { OtherHousesTwoTone, SettingsInputAntennaTwoTone } from '@mui/icons-material';
 
 interface Data {
   price: number;
@@ -67,20 +68,38 @@ const listTitle = 'My Grocery List';
 const rows = [
   createData('Celery', 1.89, 'one stalk', 3),
   createData('Donuts', 3.99, 'one box, frosted', 2),
-  createData('Spam', 2.15, 'what is it, really?', 1),
-  createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
+  createData('Spam', 2.15, 'what is it, really?', 1)
+  // createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
 ];
 //fetch props: JSON `https://foodmartapi-1646848624483.azurewebsites.net/${path}`
 // const setItems
 async function getItems(path: string) {
+  // const response =  await fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`);
+  // const fetchedItems = await response.json();
+  // return fetchedItems;
+  
+  fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`)
+  .then(response => {
+    return response.json();
+  })
+  .then(groceryList => {
+    console.log(groceryList);
+    for(const item of groceryList) {
+      let rowData = {
+        'name': item.itemId.itemName,
+        'price': item.itemId.itemPrice,
+        'description': item.itemId.description,
+        'itemCount': item.itemCount
+      }
+      //use spread to udpate rows, surround with useEffect, add setState
+      rows.push(rowData);
+    }
+  })
+}
+function setRows (path: string){
+  let rowItems = getItems(path);
+  console.log(rowItems);
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
-  const response =  await fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`);
-  const fetchedItems = await response.json();
-
-  return fetchedItems;
 }
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -252,14 +271,14 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
       {/* Need to add delete functionality deleteItem(selectedObjects)*/}
       {numSelected > 0 ? (
         <Tooltip title="Delete">
-          <IconButton onClick={() => console.log(getItems(apiPath))}>
+          <IconButton onClick={() => deleteItem(selectedObjects)}>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
       ) : (
         //Add button
         <Tooltip title="Add Item">
-          <IconButton>
+          <IconButton onClick={() => setRows(apiPath)}>
             <AddIcon />
           </IconButton>
         </Tooltip>
