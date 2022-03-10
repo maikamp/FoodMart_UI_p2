@@ -21,6 +21,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import AddIcon from '@mui/icons-material/Add';
+import { useEffect, useState } from 'react';
 
 interface Data {
   price: number;
@@ -30,6 +31,15 @@ interface Data {
   //on list : list name?
 }
 
+interface listList {
+
+}
+interface groceryList {
+  groceryListId: number;
+  userId: number;
+  itemName: string;
+  itemCount: number;
+}
 function createData(
   name: string,
   price: number,
@@ -43,9 +53,14 @@ function createData(
     itemCount
   };
 }
-function deleteItem (items: readonly string[]){
+function deleteItem(items: readonly string[]) {
   console.log(items);
 }
+//temp hardcoded props
+const userProps = { 'id': 1, 'username': 'mike' }
+
+
+const apiPath = 'groceryLists/userList?id=1';
 //list name
 const listTitle = 'My Grocery List';
 //TODO this is where JSON needs to be destructured into relevant data for the display table
@@ -55,9 +70,18 @@ const rows = [
   createData('Spam', 2.15, 'what is it, really?', 1),
   createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
 ];
-//fetch
-// const groceryItem = [itemName, itemPrice] = groceries;
+//fetch props: JSON `https://foodmartapi-1646848624483.azurewebsites.net/${path}`
+// const setItems
+async function getItems(path: string) {
 
+  // Note: the empty deps array [] means
+  // this useEffect will run once
+  // similar to componentDidMount()
+  const response =  await fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`);
+  const fetchedItems = await response.json();
+
+  return fetchedItems;
+}
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -224,11 +248,11 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
         >
           {listTitle}
         </Typography>
-      )} 
-      {/* Need to add delete functionality */}
+      )}
+      {/* Need to add delete functionality deleteItem(selectedObjects)*/}
       {numSelected > 0 ? (
         <Tooltip title="Delete">
-          <IconButton onClick={()=>deleteItem(selectedObjects)}>
+          <IconButton onClick={() => console.log(getItems(apiPath))}>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
