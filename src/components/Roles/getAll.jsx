@@ -7,7 +7,7 @@ export default class GetAllRoles extends React.Component{
   }
   async getAll(){
     let result = {};
-    await axios.get('http://localhost:8080/roles')
+    await axios.get('https://foodmartapi-1646848624483.azurewebsites.net/roles')
     .then(res => {
       result = res.data;
       this.setState({

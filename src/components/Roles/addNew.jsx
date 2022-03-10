@@ -14,7 +14,7 @@ export default function AddRole(){
    
     const add = async() =>{
         let newRole = {description: descriptionText.current.value}
-        const resp = await axios.post('http://localhost:8080/roles',newRole);
+        const resp = await axios.post('https://foodmartapi-1646848624483.azurewebsites.net/roles',newRole);
         const data = await resp.data;
         console.log(data);
         descriptionText.current.value = '';

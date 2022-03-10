@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../App.css';
 export function Role(props) {
     async function deleteRole(id){
-        const resp = await axios.delete(`http://localhost:8080/roles?id=${id}`);
+        const resp = await axios.delete(`https://foodmartapi-1646848624483.azurewebsites.net/roles?id=${id}`);
         const data = await resp.data;
         console.log(data);
     }

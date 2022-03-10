@@ -13,7 +13,7 @@ export default function GetById() {
     const getById = async () => {
         const num = parseInt(roleId.current.value)
         console.log(typeof num);
-        const resp = await axios.get(`http://localhost:8080/roles/byId?id=${num}`);
+        const resp = await axios.get(`https://foodmartapi-1646848624483.azurewebsites.net/roles/byId?id=${num}`);
         const data = await resp.data;
         setRole_id(data.id);
         setRoleDesc(data.description);
