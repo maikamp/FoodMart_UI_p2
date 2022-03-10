@@ -56,6 +56,9 @@ function createData(
 }
 function deleteItem(items: readonly string[]) {
   console.log(items);
+  for (let item of items){
+    removeRow(item);
+  }
 }
 //temp hardcoded props
 const userProps = { 'id': 1, 'username': 'mike' }
@@ -68,8 +71,8 @@ const listTitle = 'My Grocery List';
 const rows = [
   createData('Celery', 1.89, 'one stalk', 3),
   createData('Donuts', 3.99, 'one box, frosted', 2),
-  createData('Spam', 2.15, 'what is it, really?', 1)
-  // createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
+  createData('Spam', 2.15, 'what is it, really?', 1),
+  createData('All-Porpoise Flour', 59.99, 'Not a typo, flour made from porpoises', 5)
 ];
 //fetch props: JSON `https://foodmartapi-1646848624483.azurewebsites.net/${path}`
 // const setItems
@@ -77,28 +80,37 @@ async function getItems(path: string) {
   // const response =  await fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`);
   // const fetchedItems = await response.json();
   // return fetchedItems;
-  
+
   fetch(`https://foodmartapi-1646848624483.azurewebsites.net/${path}`)
-  .then(response => {
-    return response.json();
-  })
-  .then(groceryList => {
-    console.log(groceryList);
-    for(const item of groceryList) {
-      let rowData = {
-        'name': item.itemId.itemName,
-        'price': item.itemId.itemPrice,
-        'description': item.itemId.description,
-        'itemCount': item.itemCount
+    .then(response => {
+      return response.json();
+    })
+    .then(groceryList => {
+      console.log(groceryList);
+      for (const item of groceryList) {
+        let rowData = {
+          'name': item.itemId.itemName,
+          'price': item.itemId.itemPrice,
+          'description': item.itemId.description,
+          'itemCount': item.itemCount
+        }
+        //use spread to udpate rows, surround with useEffect, add setState
+        rows.push(rowData);
       }
-      //use spread to udpate rows, surround with useEffect, add setState
-      rows.push(rowData);
-    }
-  })
+    })
 }
-function setRows (path: string){
+function setRows(path: string) {
   let rowItems = getItems(path);
   console.log(rowItems);
+}
+
+function removeRow(itemName: string) {
+  for (let row of rows) {
+    if (row.name === itemName) {
+      const index = rows.indexOf(row, 0);
+      delete rows[index];
+    }
+  }
 
 }
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
