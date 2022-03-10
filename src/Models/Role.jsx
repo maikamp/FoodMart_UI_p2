@@ -6,7 +6,7 @@ export function Role(props) {
     async function deleteRole(id){
         const resp = await axios.delete(`http://localhost:8080/roles?id=${id}`);
         const data = await resp.data;
-        // console.log(data);
+        console.log(data);
     }
     return <tr>
         <td>{props.id}</td>
