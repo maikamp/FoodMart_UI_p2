@@ -10,7 +10,8 @@ import GetById from './components/Roles/getById';
 import LoginMain from './components/login';
 import GetAllRoles from './components/Roles/getAll';
 import UserCard from "./components/UserCard";
-
+import Form from './components/Form'
+import Register from './components/Registration'
 
 function App() {
   return (
@@ -19,6 +20,11 @@ function App() {
         <UserCard/>
       <Navbar></Navbar>
      
+      <Form/>
+
+      <Register/>
+      
+
      {/*<Register/>*/}
       <EnhancedTable></EnhancedTable>
         <AddRole/>
