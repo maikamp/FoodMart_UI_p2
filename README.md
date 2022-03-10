@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# FoodMart_UI_p2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+API repo: https://github.com/jalejr/FoodMartAPI_p2
 
-## Available Scripts
+## Grocery List application to allow users to manage shopping lists
 
-In the project directory, you can run:
+## Project:
+This is a web application that connects to a database and is used to create a grocery list before going to a store. It would make planning ideal to make sure a store has what you would want before going in. Expansion of this idea can make it so a store could have employees prepare an order for the user to make shopping much faster and efficient.
+  
+## Tech Stack:
+- Spring Boot (Spring 5)
+- Azure DevOps
+- Azure SQL
+- HTML/CSS, JavaScript (Reach goal: React)
+- Java 8
+### As a Customer I must be able to:
+- open main page 
+- register
+- login/logout
+- create a list
+- view my list
+- remove a list i own
+- search for items
+- add items to my list
+- remove items from my list
+- get the total cost of my list
+- set the quantity of an item on my list
+### As an Employee I must be able to:
+- open main page 
+- register using Employee number
+- login/logout
+- view item inventory
+- add items to inventory
+- update items in inventory
+- remove items from inventory
+### As a Manager I must be able to:
+- add new employee 
+- view current employee(s)
+- update an employee
+- remove an employee
+- all other employee functionality
 
-### `npm start`
+Reach Goals:
+- customers can share lists  
+- customers can have many lists
+  
+contributors: Awaab Elamin, Andy Escobar, Joshua Robles, Mike Campbell, Scott Damon
+  
+  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![p2_erd](https://user-images.githubusercontent.com/70548966/156214482-17d4b360-a4af-4ab1-bccb-13b0ba88c9bc.PNG)
