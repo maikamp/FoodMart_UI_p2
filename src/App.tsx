@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
-import Register from './components/Register'
+import Form from './components/Form'
 
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
      
-     <Register/>
+      <Form/>
+      
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
