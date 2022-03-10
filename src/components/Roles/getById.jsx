@@ -1,7 +1,6 @@
 import { Button } from '@mui/material';
 import axios from 'axios';
 import React, { useRef, useState } from 'react';
-import { Role } from '../../Models/Role';
 export default function GetById() {
     const roleId = useRef(0);
     const [role_id, setRole_id] = useState();
