@@ -9,11 +9,14 @@ import AddRole from './components/Roles/addNew';
 import GetById from './components/Roles/getById';
 import LoginMain from './components/login';
 import GetAllRoles from './components/Roles/getAll';
+import UserCard from "./components/UserCard";
 
 
 function App() {
   return (
     <div className="App">
+
+        <UserCard/>
       <Navbar></Navbar>
      
      {/*<Register/>*/}
