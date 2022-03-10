@@ -38,11 +38,11 @@ const pages = [{
 ];
 const settings = [{
     "title": 'Profile',
-    "link": 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    "link": '/Profile'
     },
     {
         "title": 'Dashboard',
-        "link": 'https://www.youtube.com/watch?v=o0u4M6vppCI'
+        "link": '/Profile'
     },
     {
         "title": 'Logout',

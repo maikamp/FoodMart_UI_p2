@@ -15,16 +15,13 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import UserCard from "./components/UserCard";
 
 function App() {
   
   return (
     <div className="App">
-
-        <UserCard/>
       <Navbar></Navbar>
-
-      <Register/>
       
 
      {/*<Register/>*/}
@@ -53,7 +50,8 @@ function App() {
                 <Route path='/EnhancedTable' element={< EnhancedTable />}></Route>
                 <Route path='/Login' element={< LoginMain />}></Route>
                 <Route path='/Logout' element={< Logout />}></Route>
-                <Route path="" element={<>Welcom</>}></Route>
+                    <Route path='/Profile' element={< UserCard />}></Route>
+                <Route path="" element={<>Welcome to the Food Mart :)</>}></Route>
                 </Routes>
                 
             </div>

@@ -59,6 +59,9 @@ export default function UserCard() {
             return (
                 <Card sx={{ minWidth: 275 }}>
                     <CardContent>
+                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                            Profile:
+                        </Typography>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                             {username}
                         </Typography>
@@ -66,12 +69,7 @@ export default function UserCard() {
                             {email}
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            Snoopy
-                        </Typography>
-                        <Typography variant="body2">
-                            well meaning and kindly.
-                            <br />
-                            {'"a benevolent smile"'}
+                            Thanks for being a member
                         </Typography>
                     </CardContent>
                 </Card>
