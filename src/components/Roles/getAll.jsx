@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { Role } from '../../Models/Role';
+<<<<<<< HEAD
 export default class GetAllRoles extends React.Component{
   state = {
     allRoles:[]
@@ -49,6 +50,34 @@ export default class GetAllRoles extends React.Component{
       <tbody>
         {allRoles}
       </tbody>
+=======
+export default function GetAllRoles() {
+    const [all, setAll] = useState();
+    const getAll = async () => {
+        let respo = await axios.get('http://localhost:8080/roles');
+        let data = await respo.data;
+        console.log(data);
+        let allRoles = data.map(r => {
+            return <Role
+                key={r.id}
+                id={r.id}
+                description={r.description}
+            />
+        });
+        setAll(allRoles);
+    }
+    
+
+    return <div>
+        <button onClick={getAll}>get all roles</button>
+        <table>
+            <thead>
+                <tr><th>id</th><th>description</th></tr>
+            </thead>
+            <tbody>
+                {all}
+            </tbody>
+>>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
 
 
     </table> 

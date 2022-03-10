@@ -7,6 +7,7 @@ import EnhancedTable from './components/ItemList'
 import AddRole from './components/Roles/addNew';
 import GetById from './components/Roles/getById';
 import GetAllRoles from './components/Roles/getAll';
+<<<<<<< HEAD
 import LoginMain from './components/login';
 import Logout from './components/logout';
 import {
@@ -16,19 +17,31 @@ import {
   Link
 } from 'react-router-dom';
 
+=======
+import UserCard from "./components/UserCard";
+import Register from './components/Registration';
+import AddList from './components/Lists/addNewList';
+import GetAllList from './components/Lists/getAlllists';
+>>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
 
 function App() {
   
   return (
     <div className="App">
+
+        <UserCard/>
       <Navbar></Navbar>
-     
+
+      <Register/>
+      
+
      {/*<Register/>*/}
       {/* <EnhancedTable></EnhancedTable> */}
         {/* <AddRole/>
         <GetById/>
         <LoginMain/>
         <GetAllRoles/>
+<<<<<<< HEAD
         <RoleMain/> */}
         <Router>
             <div>
@@ -55,6 +68,28 @@ function App() {
             </div>
         </Router>
      
+=======
+        <AddList/>
+        <GetAllList/>
+
+
+  
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
     </div>
   );
 }

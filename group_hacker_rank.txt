@@ -59,3 +59,7 @@ IXXIIIXI
 identify 'splittable' groups 
 -- groups of 3 or more adjacent pins that can be 'split' to add to minTurns
 --for each splittable minTurns++
+
+
+ok maybe, we split each set of adajecent pins into their own arrays
+then evaluate those arrays individually for minTurns
