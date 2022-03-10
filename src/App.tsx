@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
 import Form from './components/Form'
-
+import Register from './components/Registration'
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
       <Navbar></Navbar>
      
       <Form/>
+
+      <Register/>
       
 
       <header className="App-header">
