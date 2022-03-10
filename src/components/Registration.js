@@ -3,7 +3,7 @@ import axios from 'axios';
 import React from 'react';
 
 
-export default class Register extends React.Component{
+export default class Register extends React.Component {
 
     state = {
         username: '',
@@ -12,16 +12,39 @@ export default class Register extends React.Component{
     }
     //const [username, setUserrName] = useState('');
     //const [password, setPassword] = useState('');
-   // const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState('');
     handleChange = event => {
-        this.setState({ username: event.target.value,
-                        password: event.target.value,
-                        email: event.target.value,
-                        role: event.target.value
+        this.setState({
+            username: event.target.value,
+            password: event.target.value,
+            email: event.target.value,
+            role: event.target.value
         })
+
+
+        //retrieve roles from data base
+
+
+        const unorderedList = document.getElementById('userRoles');
+
+        fetch('https://foodmartapi-1646848624483.net/roles')
+            .then(response => {
+                return response.json();
+            })
+            .then(userRoles => {
+                console.log(userRoles);
+                for (const type of userRoles) {
+                    const myOption = document.createElement('option');
+                    myOption.value = type.id;
+                    unorderedList.appendChild(myOption);
+                }
+            });
+
     }
     handleSubmit = event => {
         event.preventDefault();
+
+
 
         const User = {
             username: this.state.username,
@@ -30,57 +53,66 @@ export default class Register extends React.Component{
             role: this.state.role,
         };
 
-    axios.post('https://foodmartapi-1646848624483.net/users/addUser' , { User })
-        .then(res => {
-            console.log(res);
-            console.log(res.data)
-        })
+       
+
+        axios.post('https://foodmartapi-1646848624483.net/users/addUser', { User })
+            .then(res => {
+                console.log(res);
+                console.log(res.data)
+            })
+
+            // if (username === '' || email === '' || password === '' || role === '') {
+            //     //setError(true);
+            //   } else {
+            //     //setSubmitted(true);
+            //     // setError(false);
+            //    }
 
     }
 
-render() {
-    return (
-        <div>
-            <form onSubmit={this.handleSubmit}>
-                <label> 
-                    UserName:
-                    <input type="text" name="username" onChange={this.handleChange} />
-                </label>
+    render() {
+        return (
+            <div>
+                <div>
+                    <h1>User Registration</h1>
+                </div>
 
-                <br></br>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        UserName:
+                        <input type="text" name="username" onChange={this.handleChange} />
+                    </label>
 
-                <label> 
-                    Email:
-                    <input type="text" name="email" onChange={this.handleChange} />
-                </label>
+                    <br></br>
 
-                <br></br>
-                <label> 
-                    Password:
-                    <input type="text" name="password" onChange={this.handleChange} />
-                </label>
+                    <label>
+                        Email:
+                        <input type="text" name="email" onChange={this.handleChange} />
+                    </label>
 
-                <br></br>
+                    <br></br>
+                    <label>
+                        Password:
+                        <input type="text" name="password" onChange={this.handleChange} />
+                    </label>
 
-                <label>
-                    Role:
-                    <select>
-                        <option value = "1"> 1 </option>
-                        <option value = "2"> 2 </option>
-                        <option value = "3"> 3 </option>
-                    </select>
-                </label>
-                
-                <button type = "submit"> Register </button>
-            
-            </form>
+                    <br></br>
+
+                    <label>
+                        Role:
+                        <select id="userRoles" name="userRoles"> </select>
+                    </label>
+
+                    <button type="submit" onClick={this.handleSubmit}> Register </button>
+
+                </form>
 
 
-        </div>
+            </div>
 
-      
 
-    )
-}
+
+        )
+    }
 
 }
