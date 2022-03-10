@@ -2,6 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import { Role } from '../../Models/Role';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
 export default class GetAllRoles extends React.Component{
   state = {
     allRoles:[]
@@ -50,6 +53,7 @@ export default class GetAllRoles extends React.Component{
       <tbody>
         {allRoles}
       </tbody>
+<<<<<<< HEAD
 =======
 export default function GetAllRoles() {
     const [all, setAll] = useState();
@@ -78,6 +82,8 @@ export default function GetAllRoles() {
                 {all}
             </tbody>
 >>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
+=======
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
 
 
     </table> 

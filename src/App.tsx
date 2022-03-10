@@ -8,6 +8,9 @@ import AddRole from './components/Roles/addNew';
 import GetById from './components/Roles/getById';
 import GetAllRoles from './components/Roles/getAll';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
 import LoginMain from './components/login';
 import Logout from './components/logout';
 import {
@@ -16,6 +19,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+<<<<<<< HEAD
 
 =======
 import UserCard from "./components/UserCard";
@@ -23,16 +27,15 @@ import Register from './components/Registration';
 import AddList from './components/Lists/addNewList';
 import GetAllList from './components/Lists/getAlllists';
 >>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
+=======
+import UserCard from "./components/UserCard";
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
 
 function App() {
   
   return (
     <div className="App">
-
-        <UserCard/>
       <Navbar></Navbar>
-
-      <Register/>
       
 
      {/*<Register/>*/}
@@ -42,6 +45,9 @@ function App() {
         <LoginMain/>
         <GetAllRoles/>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
         <RoleMain/> */}
         <Router>
             <div>
@@ -62,12 +68,14 @@ function App() {
                 <Route path='/EnhancedTable' element={< EnhancedTable />}></Route>
                 <Route path='/Login' element={< LoginMain />}></Route>
                 <Route path='/Logout' element={< Logout />}></Route>
-                <Route path="" element={<>Welcom</>}></Route>
+                    <Route path='/Profile' element={< UserCard />}></Route>
+                <Route path="" element={<>Welcome to the Food Mart :)</>}></Route>
                 </Routes>
                 
             </div>
         </Router>
      
+<<<<<<< HEAD
 =======
         <AddList/>
         <GetAllList/>
@@ -90,6 +98,8 @@ function App() {
         </a>
       </header>
 >>>>>>> 93afb5f5a45ed660bcf1de71ef09e0f5232d4fcb
+=======
+>>>>>>> 7cea8497ca32ed872c30250ca1da283b8e403cda
     </div>
   );
 }

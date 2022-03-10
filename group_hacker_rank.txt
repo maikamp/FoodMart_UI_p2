@@ -63,3 +63,7 @@ identify 'splittable' groups
 
 ok maybe, we split each set of adajecent pins into their own arrays
 then evaluate those arrays individually for minTurns
+
+so if instead we use:
+
+let adjPins = config.split(/X+/);
