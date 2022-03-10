@@ -10,7 +10,9 @@ import GetById from './components/Roles/getById';
 import LoginMain from './components/login';
 import GetAllRoles from './components/Roles/getAll';
 import UserCard from "./components/UserCard";
-import Register from './components/Registration'
+import Register from './components/Registration';
+import AddList from './components/Lists/addNewList';
+import GetAllList from './components/Lists/getAlllists';
 
 function App() {
   return (
@@ -28,6 +30,11 @@ function App() {
         <GetById/>
         <LoginMain/>
         <GetAllRoles/>
+        <AddList/>
+        <GetAllList/>
+
+
+  
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

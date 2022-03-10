@@ -1,28 +1,27 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Role } from '../../Models/Role';
-export default function GetAllRoles() {
+import { Role as UserList } from '../../Models/Role';
+export default function GetAllLists() {
     const [all, setAll] = useState();
     const getAll = async () => {
-        let respo = await axios.get('http://localhost:8080/roles');
+        let respo = await axios.get('https://foodmartapi-1646848624483.azurewebsites.net/userLists');
         let data = await respo.data;
         console.log(data);
-        let allRoles = data.map(r => {
-            return <Role
+        let allUserList = data.map(r => {
+            return <UserList
                 key={r.id}
                 id={r.id}
-                description={r.description}
             />
         });
-        setAll(allRoles);
+        setAll(allUserList);
     }
-    
 
     return <div>
-        <button onClick={getAll}>get all roles</button>
+        <h1> All User Lists </h1>
+        <button onClick={getAll}>Get User Lists </button>
         <table>
             <thead>
-                <tr><th>id</th><th>description</th></tr>
+                <tr><th> ID </th></tr>
             </thead>
             <tbody>
                 {all}
