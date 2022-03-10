@@ -15,13 +15,25 @@ import MenuItem from '@mui/material/MenuItem';
 import {Link} from "@mui/material";
 
 const pages = [{
-        "title": 'Items',
-        "link": 'https://www.youtube.com/watch?v=hpsbj0OoeNo'
+        "title": 'Get All Roles',
+        "link": '/Roles'
     },
     {
-        "title": 'Lists',
-        "link": 'https://www.youtube.com/watch?v=o_cikTgwMXY'
+        "title": 'Get By ID',
+        "link": '/GetById'
     },
+    {
+        "title": 'Enhanced Table',
+        "link": '/EnhancedTable'
+    },
+    {
+        "title": 'Add Role',
+        "link": '/AddRole'
+    },
+    {
+        "title": 'Login',
+        "link": '/Login'
+    }
 
 ];
 const settings = [{
@@ -34,7 +46,7 @@ const settings = [{
     },
     {
         "title": 'Logout',
-        "link": 'https://www.youtube.com/watch?v=SW-BU6keEUw'
+        "link": '/Logout'
     },
 ]
 

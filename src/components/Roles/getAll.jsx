@@ -29,6 +29,11 @@ export default class GetAllRoles extends React.Component{
       this.setState({allRoles: allRoles});
   }
   render(){
+    let pathname = window.location.pathname;
+  if (localStorage.getItem('username') === null) {
+    pathname = '/Login'
+    window.location.pathname = pathname;
+  }
     let allRoles = this.state.allRoles.map(r => {
       return <Role
         key={r.id}
