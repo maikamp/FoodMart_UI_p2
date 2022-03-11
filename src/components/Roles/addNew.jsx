@@ -21,6 +21,7 @@ export default function AddRole(){
         setNote('done');
     }
     return<>
+    <h1> Add Role </h1>
     <input placeholder='description' ref={descriptionText}/>
     <Button onClick={add}>Add</Button>
     <label >{note}</label>

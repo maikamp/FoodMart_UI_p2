@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { Role } from '../../Models/Role';
+
 export default class GetAllRoles extends React.Component{
   state = {
     allRoles:[]
@@ -42,6 +43,11 @@ export default class GetAllRoles extends React.Component{
       />
     });
     return(
+      
+     <div>
+       <h1> All Roles </h1>
+    
+       
       <table>
       <thead>
         <tr><th>id</th><th>description</th></tr>
@@ -50,8 +56,8 @@ export default class GetAllRoles extends React.Component{
         {allRoles}
       </tbody>
 
-
     </table> 
+    </div>
     )
   }
 }

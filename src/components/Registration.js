@@ -103,6 +103,8 @@ export default class Register extends React.Component {
                         <select id="userRoles" name="userRoles"> </select>
                     </label>
 
+                    <br></br>
+                    
                     <button type="submit" onClick={this.handleSubmit}> Register </button>
 
                 </form>

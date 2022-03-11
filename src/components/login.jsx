@@ -44,8 +44,13 @@ export default function LoginMain() {
         }
     }
     return <div>
+        <div>
+            <h1> Login </h1>
+        </div>
         <input placeholder='username' id='loginText' ref={username} />
+        <br></br>
         <input placeholder='password' id='loginText' ref={password} />
+        <br></br>
         <button id='loginButton' onClick={submitLogin}>submit</button>
         <label >{respose}</label>
     </div>

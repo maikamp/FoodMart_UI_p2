@@ -20,6 +20,7 @@ export default function GetById() {
         console.log(data);
     }
     return <>
+    <h1> Get Role By Id </h1>
         <input placeholder='get by id' ref={roleId} />
         <Button onClick={getById}>search</Button>
         <table>

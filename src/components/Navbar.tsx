@@ -27,6 +27,10 @@ const pages = [{
         "link": '/GetById'
     },
     {
+        "title": 'Get User List By Id',
+        "link": '/GetUserListById'
+    },
+    {
         "title": 'Enhanced Table',
         "link": '/EnhancedTable'
     },

@@ -7,6 +7,7 @@ import Register from './components/Registration'
 import AddRole from './components/Roles/addNew';
 import GetById from './components/Roles/getById';
 import GetAllRoles from './components/Roles/getAll';
+import GetListById from './components/Lists/getListById';
 import LoginMain from './components/login';
 import Logout from './components/logout';
 import GetAllLists from './components/Lists/getAlllists';
@@ -16,6 +17,10 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+
+//import AddList from './components/Lists/addNewList';
+import GetAllList from './components/Lists/getAlllists';
+
 import UserCard from "./components/UserCard";
 
 function App() {
@@ -31,6 +36,7 @@ function App() {
         <GetById/>
         <LoginMain/>
         <GetAllRoles/>
+
         <RoleMain/> */}
         <Router>
             <div>
@@ -49,6 +55,7 @@ function App() {
                 <Route path='/GetAllList' element={< GetAllLists />}></Route>
                 <Route path='/AddRole' element={< AddRole />}></Route>
                 <Route path='/GetById' element={< GetById />}></Route>
+                <Route path='/GetListById' element={< GetListById />}></Route>
                 <Route path='/EnhancedTable' element={< EnhancedTable />}></Route>
                 <Route path='/Login' element={< LoginMain />}></Route>
                 <Route path='/Registration' element={< Register />}></Route>
@@ -59,7 +66,25 @@ function App() {
                 
             </div>
         </Router>
-     
+
+
+  
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+
     </div>
   );
 }
