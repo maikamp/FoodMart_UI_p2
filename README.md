@@ -5,7 +5,7 @@ API repo: https://github.com/jalejr/FoodMartAPI_p2
 ## Grocery List application to allow users to manage shopping lists
 
 ## Project:
-This is a web application that connects to a database and is used to create a grocery list before going to a store. It would make planning ideal to make sure a store has what you would want before going in. Expansion of this idea can make it so a store could have employees prepare an order for the user to make shopping much faster and efficient.
+FoodMart is a web-based application that connects to an Azure SQL database and leverages Spring Data JPA. This application will allow customers and employees to create, edit and delete grocery lists that ensures availability before going to a store. This REST API was deployed to Azure to handle requests from our React frontend. The deployment of this API was implemented by a CI/CD pipeline from GitHub Actions with Azure Pipeline. Expansion of this idea can make it so a store(s) could have employees prepare an orders for the user to make shopping much faster and efficient.
   
 ## Tech Stack:
 - Spring Boot (Spring 5)
